@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UniMate — Find your people. Find your place.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+    <div class="brand" onclick="showPage('landing')">
+        <span class="logo">
+            U
+        </span>
+        UniMate
+    </div>
+    <nav class="nav-links">
+        <button
+            data-page="landing"
+            class="active"
+            onclick="showPage('landing')">
+            Home
+        </button>
+        <button
+            data-page="about"
+            onclick="goToAbout()">
+            About
+        </button>
+        <button
+            data-page="problem-solution"
+            onclick="showPage('problem-solution')">
+            Problem &amp; Solution
+        </button>
+    </nav>
+    <button
+        class="personalise-button"
+        onclick="startOnboarding()">
+        ✦ Personalise
+    </button>
+</header>
+<main>
+<section
+    id="landing"
+    class="page active">
+    <div class="container hero">
+        <div class="scroll-reveal">
+            <div class="eyebrow">
+                A better campus starts here
+            </div>
+            <h1>
+                Find your people.<br>
+                <span>
+                    Find your place.
+                </span>
+            </h1>
+            <p class="hero-description">
+                Discover students, study groups, clubs and
+                campus experiences that fit who you are.
+            </p>
+            <div class="hero-cta-row">
+                <button
+                    class="primary-button"
+                    onclick="startOnboarding()">
+                    Explore UniMate →
+                </button>
+                
+            </div>
+        </div>
+        <!-- HERO VISUAL -->
+        <div class="hero-visual scroll-reveal">
+            <div class="match-hero">
+                <div class="profile-card profile-main">
+                    <div class="profile-top">
+                        <div class="profile-avatar">
+                            AL
+                        </div>
+                        <div>
+                            <div class="profile-label">
+                                YOUR UNIMATE
+                            </div>
+                            <h3>
+                                Alex
+                            </h3>
+                            <p>
+                                Computer Science
+                                Year 2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-tags">
+                        <span>
+                            Technology
+                        </span>
+                        <span>
+                            AI
+                        </span>
+                    </div>
+                    <div class="profile-bottom">
+                        <span>
+                            Evening
+                        </span>
+                        <span>
+                            Social
+                        </span>
+                        <span>
+                            Collaborative
+                        </span>
+                    </div>
+                </div>
+                <div class="match-connector">
+                    <div class="connector-line"></div>
+                    <div class="match-badge">
+                        <strong>
+                            94%
+                        </strong>
+                        <span>
+                            MATCH
+                        </span>
+                    </div>
+                    <div class="connector-line"></div>
+                </div>
+                <div class="profile-card profile-match">
+                    <div class="profile-top">
+                        <div class="profile-avatar aisha">
+                            AK
+                        </div>
+                        <div>
+                            <div class="profile-label">
+                                YOU MIGHT CLICK WITH
+                            </div>
+                            <h3>
+                                Aisha
+                            </h3>
+                            <p>
+                                Computer Science · Year 2
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile-tags">
+                        <span>
+                            Technology
+                        </span>
+                        <span>
+                            AI
+                        </span>
+                        <span>
+                            Design
+                        </span>
+                    </div>
+                    <div class="shared">
+                        <span>
+                            ✓
+                        </span>
+                        Things in common
+                    </div>
+                </div>
+            </div>
+            <div class="hero-caption">
+                People · Study · Discover · Go Together
+            </div>
+        </div>
+    </div>
+    <div id="about-features">
+        <section
+            id="about"
+            class="landing-about">
+            <div class="container">
+                <div
+                    class="landing-about-header
+                           scroll-reveal
+                           landing-features-reveal">
+                    <div class="eyebrow">
+                        About
+                    </div>
+                    <h2>
+                        A more connected<br>
+                        <span>campus experience.</span>
+                    </h2>
+                    <p>
+                        UniMate is a personalized campus experience
+                        that helps students discover the right people,
+                        study groups, communities and activities
+                        without having to search across different
+                        platforms.
+                    </p>
+                    <div class="about-stats">
+                        <div class="about-stat">
+                            <strong>500+</strong>
+                            <span>Students matched</span>
+                        </div>
+                        <div class="about-stat">
+                            <strong>40+</strong>
+                            <span>Courses covered</span>
+                        </div>
+                        <div class="about-stat">
+                            <strong>12</strong>
+                            <span>Campus communities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="landing-features">
+            <div class="container">
+                <div
+                    class="landing-features-header
+                           scroll-reveal
+                           landing-features-reveal">
+                    <div class="eyebrow">
+                        Features
+                    </div>
+                    <p>
+                        The right people can turn an unfamiliar campus
+                        into a place that feels like yours.
+                    </p>
+                </div>
+                <div class="pillar-grid">
+                    <div
+                        class="pillar
+                               scroll-reveal
+                               landing-features-reveal">
+                        <div class="pillar-number">
+                            01 — PEOPLE
+                        </div>
+                        <h3>
+                            Meet people
+                        </h3>
+                        <p>
+                            Find students who share your interests,
+                            course and goals.
+                        </p>
+                    </div>
+                    <div
+                        class="pillar
+                               scroll-reveal
+                               landing-features-reveal">
+                        <div class="pillar-number">
+                            02 — STUDY
+                        </div>
+                        <h3>
+                            Study together
+                        </h3>
+                        <p>
+                            Find groups that match your subject,
+                            time and study style.
+                        </p>
+                    </div>
+                    <div
+                        class="pillar
+                               scroll-reveal
+                               landing-features-reveal">
+                        <div class="pillar-number">
+                            03 — DISCOVER
+                        </div>
+                        <h3>
+                            Explore campus
+                        </h3>
+                        <p>
+                            Discover events, clubs and experiences
+                            chosen for you.
+                        </p>
+                    </div>
+                    <div
+                        class="pillar
+                               scroll-reveal
+                               landing-features-reveal">
+                        <div class="pillar-number">
+                            04 — CONNECT
+                        </div>
+                        <h3>
+                            Go together
+                        </h3>
+                        <p>
+                            Turn shared interests into real campus
+                            connections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section class="difference-section">
+        <div class="container">
+            <div class="difference-header scroll-reveal">
+                <div class="difference-title">
+                    <div class="eyebrow">
+                        The difference
+                    </div>
+                    <h2>
+                        Not another
+                        <span>campus platform.</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="difference-grid">
+                <!-- TODAY -->
+                <article
+                    class="difference-card
+                           today
+                           scroll-reveal">
+                    <div class="difference-label">
+                        Today
+                    </div>
+                    <h3>
+                        Students search
+                        in different places.
+                    </h3>
+                    <p>
+                        Students use different platforms
+                        for messaging, study groups, clubs,
+                        events and social connections.
+                    </p>
+                </article>
+                <!-- UNIMATE -->
+                <article
+                    class="difference-card
+                           unimate
+                           scroll-reveal">
+                    <div class="difference-label">
+                        With UniMate
+                    </div>
+                    <h3>
+                        The experience
+                        comes together.
+                    </h3>
+                    <p>
+                        One personalized space helps students
+                        discover people, study opportunities,
+                        communities and activities that are
+                        relevant to them.
+                    </p>
+                    
+                </article>
+            </div>
+        </div>
+    </section>
+</section>
+<section
+    id="problem-solution"
+    class="page">
+    <div class="container problem-page">
+        <div class="problem-header scroll-reveal">
+            <div class="eyebrow">
+                Why UniMate exists
+            </div>
+            <h1>
+                One campus.<br>
+                <span>
+                    Too many places to look.
+                </span>
+            </h1>
+            <p>
+                University life should feel connected, but
+                finding the right people, communities and
+                experiences can often mean searching across
+                multiple platforms.
+            </p>
+        </div>
+        <div class="problem-grid">
+            <article
+                class="problem-card problem scroll-reveal">
+                <div class="problem-card-header">
+                    <span></span>
+                    Problem
+                </div>
+                <h2>
+                    Campus life is fragmented.
+                </h2>
+                <p>
+                    University students face a fragmented digital
+                    experience, having to use multiple platforms
+                    to find study partners, communities, people
+                    with shared interests, and campus activities.
+                    This can make it difficult especially for new
+                    students to find compatible connections,
+                    get involved, and know where to begin.
+                </p>
+            </article>
+            <article
+                class="problem-card solution scroll-reveal">
+                <div class="problem-card-header">
+                    <span></span>
+                    Solution
+                </div>
+                <h2>
+                    UniMate brings it together.
+                </h2>
+                <p>
+                    UniMate brings people, study groups,
+                    communities, and campus activities into one
+                    personalized experience, helping students
+                    discover connections, join communities,
+                    and stay informed about upcoming events.
+                </p>
+            </article>
+        </div>
+        <!-- Research Section -->
+        <div class="research-section scroll-reveal">
+
+            <h2>Research</h2>
+            <div class="section-label">What the research tells us</div>
+
+            <div class="research-grid">
+                <div class="research-card">
+                    <div class="research-stat">44%</div>
+                    <h4>Feel lonely at university</h4>
+                    <p>
+                        Large class sizes, remote learning, and packed schedules leave little room for meaningful connection.
+                    </p>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-stat alt">1 in 4</div>
+                    <h4>Fall short of their expectations</h4>
+                    <p>
+                        Students participate in clubs and activities significantly less than they intended when starting university.
+                    </p>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-stat">25%</div>
+                    <h4>Never get involved</h4>
+                    <p>
+                        One in four students never engage with campus societies, sports teams, or peer support groups.
+                    </p>
+                </div>
+
+                <div class="research-card">
+                    <div class="research-stat alt">#1</div>
+                    <h4>Friction is the real barrier</h4>
+                    <p>
+                        The problem isn't a lack of events or clubs it's fragmented systems that make them hard to discover.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Why It Matters Section -->
+        <div class="matters-section scroll-reveal">
+
+            <h2>Why it matters</h2>
+
+            <div class="matters-content">
+                <p class="matters-lead">
+                    University life is meant to be transformative, yet structural hurdles leave thousands of students feeling disconnected from campus culture.
+                </p>
+
+                <div class="matters-grid">
+                    <div class="matters-card">
+                        <div>
+                            <h4>Isolation harms well-being</h4>
+                            <p>
+                                When students struggle to navigate large campuses or balance demanding schedules, isolation sets in, and that can weigh on mental well-being, motivation, and academic performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="matters-card">
+                        <div>
+                            <h4>Unlocking Existing Value</h4>
+                            <p>
+                                Universities spend vast resources on societies and support groups. Lowering the discovery friction allows students to tap into opportunities that already exist.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="matters-card">
+                        <div>
+                            <h4>Fulfilling the University Experience</h4>
+                            <p>
+                                Higher education isn't just about degrees, it's about community. Creating a true sense of belonging transforms university from a chore into an inspiring journey.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- CTA Banner Card -->
+        <div class="cta-banner-card scroll-reveal">
+            <div class="cta-banner-content">
+                <h2>Ready to personalize your campus?</h2>
+                <p>Discover people, study groups, and activities matched to your preferences in seconds.</p>
+            </div>
+            <button class="cta-banner-button" onclick="startOnboarding()">
+                See How UniMate Works →
+            </button>
+        </div>
+        <div class="problem-footer scroll-reveal">
+            
+        </div>
+    </div>
+</section>
+<section
+    id="onboarding"
+    class="page">
+    <div class="container onboarding-wrapper">
+        <div class="onboarding-card">
+            <div class="progress">
+                <div
+                    id="progress1"
+                    class="progress-bar active">
+                </div>
+                <div
+                    id="progress2"
+                    class="progress-bar">
+                </div>
+                <div
+                    id="progress3"
+                    class="progress-bar">
+                </div>
+            </div>
+            <div class="progress-labels">
+                <span id="progressLabel1" class="active">1 · Courses</span>
+                <span id="progressLabel2">2 · Goals</span>
+                <span id="progressLabel3">3 · Preferences</span>
+            </div>
+            <div id="onboardingContent"></div>
+        </div>
+    </div>
+</section>
+<section
+    id="home"
+    class="page">
+    <div class="container home">
+        <div class="home-header">
+            <div>
+                <h1>
+                    Hello,
+                </h1>
+                <p>
+                    Here's what your campus looks like today.
+                </p>
+            </div>
+            <div class="home-header-actions">
+                <!-- NOTIFICATION BELL -->
+                <div class="notif-btn-wrapper">
+                    <button class="notif-btn" onclick="toggleNotifDropdown(event)" aria-label="Notifications">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                            <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                        </svg>
+                        <span class="notif-badge"></span>
+                    </button>
+                    <div class="notif-dropdown" id="notifDropdown" onclick="event.stopPropagation()">
+                        <div class="notif-header">
+                            <h4>Notifications</h4>
+                            <span onclick="clearNotifs()">Mark all read</span>
+                        </div>
+                        <div class="notif-item">
+                            <p><strong>Aisha (AK)</strong> sent you a connection request.</p>
+                            <small>10 mins ago</small>
+                        </div>
+                        <div class="notif-item">
+                            <p>New study group matching <strong>CSIT121</strong> was created.</p>
+                            <small>1 hour ago</small>
+                        </div>
+                        <div class="notif-item">
+                            <p><strong>AI &amp; Innovation Night</strong> is starting soon in Innovation Hub.</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </div>
+                </div>
+                <button
+                    class="secondary-button dashboard-nav-btn"
+                    onclick="showPage('dashboard')">
+                     Your Dashboard
+                </button>
+                <button
+                    class="secondary-button"
+                    onclick="resetDemo()">
+                    Reset demo
+                </button>
+            </div>
+        </div>
+        <div class="click-with-header">
+            <div class="section-label">
+                People you might click with
+            </div>
+            <div class="classification-tabs">
+                <button class="class-tab active" onclick="filterPeople('All', this)">All</button>
+                <button class="class-tab" onclick="filterPeople('Study', this)">Study</button>
+                <button class="class-tab" onclick="filterPeople('Casual', this)">Casual</button>
+            </div>
+        </div>
+        <div class="people-grid" id="peopleGrid">
+            <!-- Dynamically Rendered via JS -->
+        </div>
+        <div class="view-more-container">
+            <button class="view-more-btn" onclick="openExploreModal('people')">
+                View more →
+            </button>
+        </div>
+        <!-- HAPPENING TODAY / STUDY -->
+        <div class="feature-grid">
+            <article class="feature-card">
+                <div class="section-label">
+                    Happening today
+                </div>
+                <h2>
+                    AI &amp; Innovation Night
+                </h2>
+                <div class="meta">
+                    Today · 6:30 PM · Innovation Hub
+                </div>
+                <div class="tags">
+                    <span class="tag">
+                        Technology
+                    </span>
+                    <span class="tag">
+                        Networking
+                    </span>
+                </div>
+                <div class="social">
+                    <strong>
+                        23 students are going
+                    </strong>
+                    <div class="avatar-row">
+                        <span class="avatar">
+                            AK
+                        </span>
+                        <span class="avatar">
+                            MC
+                        </span>
+                        <span class="avatar">
+                            OH
+                        </span>
+                        <span class="avatar">
+                            +20
+                        </span>
+                    </div>
+                    <span>
+                        3 people you know are interested.
+                    </span>
+                </div>
+                <div class="feature-actions">
+                    <button
+                        class="primary-button"
+                        onclick="eventGoing(this)">
+                        I'm interested
+                    </button>
+                    <button
+                        class="explore-button"
+                        onclick="openExploreModal('events')">
+                        View more →
+                    </button>
+                </div>
+            </article>
+            <article class="feature-card">
+                <div class="section-label">
+                    Study with people
+                </div>
+                <h2>
+                    Database Systems
+                </h2>
+                <div class="meta">
+                    Exam preparation · Wednesday · 5:30 PM
+                </div>
+                <div class="reasons-list" style="margin-top:20px;">
+                    <div class="reason">
+                        Same course
+                    </div>
+                    <div class="reason">
+                        Your preferred time
+                    </div>
+                    <div class="reason">
+                        Collaborative format
+                    </div>
+                </div>
+                <div class="feature-actions">
+                    <button
+                        class="primary-button"
+                        onclick="joinGroup(this)">
+                        Join group →
+                    </button>
+                    <button
+                        class="explore-button"
+                        onclick="openExploreModal('study')">
+                        View more →
+                    </button>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+<section
+    id="dashboard"
+    class="page">
+    <div class="container home">
+        <div class="dashboard-header-row">
+            <div class="dashboard-header-left">
+                <button class="back-btn" onclick="showPage('home')">
+                    &lt;
+                </button>
+                <div>
+                    <h1>Your Dashboard</h1>
+                    <p>Manage your connections, study groups, and enrolled events</p>
+                </div>
+            </div>
+            <button class="primary-button" onclick="openPostModal()">
+                + Create Post
+            </button>
+        </div>
+        <div class="dashboard-sections-top">
+            <div class="dashboard-card timetable-card">
+                <h2>
+                    Schedule Timetable
+                </h2>
+                <div class="timetable-scroll">
+                    <div class="timetable-grid" id="timetableGrid">
+                        <!-- Rendered via JS -->
+                    </div>
+                </div>
+                <div class="timetable-legend">
+                    <span><span class="timetable-legend-dot" style="background:var(--violet);"></span>Study Groups</span>
+                    <span><span class="timetable-legend-dot" style="background:var(--mint);"></span>Events</span>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <h2>
+                    Connections
+                    <span class="badge-count" id="connectionsCount">5</span>
+                </h2>
+                <div class="dash-list" id="connectionsList">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <h2>
+                    Study Groups
+                    <span class="badge-count" id="studyGroupsCount">3</span>
+                </h2>
+                <div class="dash-list" id="studyGroupsList">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <h2>
+                    Enrolled Events
+                    <span class="badge-count" id="eventsCount">3</span>
+                </h2>
+                <div class="dash-list" id="eventsList">
+                    <!-- Rendered via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<div
+    id="postModal"
+    class="explore-modal"
+    onclick="closePostModal(event)">
+    <div
+        class="explore-modal-card"
+        onclick="event.stopPropagation()">
+        <div class="explore-modal-header">
+            <div>
+                <div class="section-label">New Post</div>
+                <h2>Create a Dashboard Entry</h2>
+            </div>
+            <button class="close-modal" onclick="closePostModal()">×</button>
+        </div>
+        <form class="post-modal-form" onsubmit="handlePostSubmit(event)">
+            <div>
+                <label style="font-size:12px; font-weight:700; color:var(--muted); display:block; margin-bottom:5px;">Post Type</label>
+                <select id="postType">
+                    <option value="Casual">Casual</option>
+                    <option value="Study">Study</option>
+                    <option value="Event">Event</option>
+                </select>
+            </div>
+            <div>
+                <label style="font-size:12px; font-weight:700; color:var(--muted); display:block; margin-bottom:5px;">Title / Name</label>
+                <input type="text" id="postTitle" placeholder="e.g. Sarah Jenkins, CSIT121 Prep, or Hackathon" required>
+            </div>
+            <div>
+                <label style="font-size:12px; font-weight:700; color:var(--muted); display:block; margin-bottom:5px;">Details / Schedule</label>
+                <input type="text" id="postMeta" placeholder="e.g. Computer Science Year 1 or Thursdays 4 PM" required>
+            </div>
+            <button type="submit" class="primary-button" style="margin-top:10px;">Post Now →</button>
+        </form>
+    </div>
+</div>
+<div
+    id="exploreModal"
+    class="explore-modal"
+    onclick="closeExploreModal(event)">
+    <div
+        class="explore-modal-card"
+        onclick="event.stopPropagation()">
+        <div class="explore-modal-header">
+            <div>
+                <div
+                    id="exploreModalLabel"
+                    class="section-label">
+                    Explore
+                </div>
+                <h2
+                    id="exploreModalTitle">
+                    Explore more
+                </h2>
+                <p
+                    id="exploreModalSubtitle">
+                    Discover more around your campus.
+                </p>
+            </div>
+            <button
+                class="close-modal"
+                onclick="closeExploreModal()"
+                aria-label="Close">
+                ×
+            </button>
+        </div>
+        <!-- SEARCH BAR FOR STUDENT MATCHES -->
+        <div id="modalSearchWrapper" class="modal-search-box" style="display:none;">
+            <input 
+                type="text" 
+                id="studentSearchInput" 
+                class="modal-search-input" 
+                placeholder="Search students by name, course, or interest..." 
+                onkeyup="filterModalStudents()">
+        </div>
+        <div
+            id="exploreList"
+            class="explore-list">
+        </div>
+    </div>
+</div>
+<nav class="mobile-nav">
+    <button
+        data-page="landing"
+        class="active"
+        onclick="showPage('landing')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/>
+        </svg>
+        Home
+    </button>
+    <button
+        data-page="problem-solution"
+        onclick="showPage('problem-solution')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Problem
+    </button>
+    <button
+        data-page="onboarding"
+        onclick="startOnboarding()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3l1.9 5.8L20 10l-4.6 3.4L17 20l-5-3.3L7 20l1.6-6.6L4 10l6.1-1.2L12 3z"/>
+        </svg>
+        Personalise
+    </button>
+    <button
+        data-page="home"
+        onclick="showPage('home')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        People
+    </button>
+    <button
+        data-page="dashboard"
+        onclick="showPage('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+        </svg>
+        Dashboard
+    </button>
+</nav>
+<div
+    id="toast"
+    class="toast">
+</div>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <span class="footer-logo">U</span>
+            UniMate
+        </div>
+        <span>@DesignAthon2026 · By: Simran Faisal Khan</span>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
