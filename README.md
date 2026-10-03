@@ -1,5 +1,7 @@
 UniMate
+
 Find Your People. Find Your Place.
+
 UniMate is a personalized campus experience that helps students discover the right people, study groups, communities, and activities without having to search across different platforms.
 
 Features
